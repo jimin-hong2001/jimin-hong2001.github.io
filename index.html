@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Jimin Hong, Ph.D. student at Sejong University. Research on vehicle-integrated solar, solar electric vehicles, renewable microgrids and CCUS.">
+<meta property="og:title" content="Jimin Hong · Research Portfolio">
+<meta property="og:description" content="Publications, awards and conference presentations.">
+<meta property="og:image" content="img/portrait.jpg">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Jimin Hong</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Schibsted+Grotesk:wght@500;700;800;900&display=swap">
+<style>
+/* Layout: a bright, gallery-white scroll story. Pinned hero, word-by-word statement, figure "chapters" that zoom in, a horizontal awards reel. */
+:root{
+  --ink:#ffffff;          /* page ground */
+  --ink-2:#f5f5f3;        /* raised surface, faintly warm */
+  --line:#e4e3df;
+  --fg:#16171a;
+  --muted:#6d6e73;
+  --dim:#a3a4a8;
+  --sun-1:#f2a516;        /* solar gradient, the one bold move */
+  --sun-2:#ee6a2c;
+  --sun-3:#dc2f5a;
+  --paper:#ffffff;        /* figure mat */
+  --f-display:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --gutter-l:max(20px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(20px, env(safe-area-inset-right, 0px));
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ink)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--sun-1);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.sun{background:linear-gradient(100deg,var(--sun-1),var(--sun-2) 45%,var(--sun-3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;background:color-mix(in srgb,var(--ink) 72%,transparent);backdrop-filter:saturate(1.6) blur(18px);-webkit-backdrop-filter:saturate(1.6) blur(18px);border-bottom:1px solid color-mix(in srgb,var(--line) 70%,transparent)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:48px;gap:16px}
+.nav b{font-family:var(--f-display);font-weight:700;font-size:15px;letter-spacing:-.01em}
+.nav nav{display:flex;gap:22px;font-size:13px;color:var(--muted)}
+.nav nav a{text-decoration:none;transition:color .2s}
+.nav nav a:hover{color:var(--fg)}
+@media (max-width:560px){.nav nav{gap:14px}.nav nav a.opt{display:none}}
+
+/* ---------- nav contacts ---------- */
+.nav-r{display:flex;align-items:center;gap:22px}
+.nav-c{display:flex;align-items:center;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:7px;height:30px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:var(--ink);font:500 12.5px var(--f-mono);color:var(--fg);text-decoration:none;cursor:pointer;white-space:nowrap;transition:border-color .2s,background .2s}
+.chip:hover{border-color:var(--fg)}
+.chip svg{width:14px;height:14px;flex:0 0 auto}
+.chip.rg{background:var(--fg);color:var(--ink);border-color:var(--fg)}
+@media (max-width:1040px){.nav nav{display:none}}
+@media (max-width:640px){.chip .lbl{display:none}.chip{padding:0 10px}}
+.chip span:first-child:not(.lbl){font-weight:700;letter-spacing:.02em}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding-block:clamp(104px,14vh,150px) clamp(56px,9vh,96px)}
+.hero-sun{position:absolute;right:-12%;top:-30%;width:min(900px,90vw);aspect-ratio:1;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle,color-mix(in srgb,var(--sun-1) 38%,transparent) 0,color-mix(in srgb,var(--sun-2) 14%,transparent) 32%,transparent 66%)}
+.hero-cells{position:absolute;right:-6%;bottom:-8%;width:68%;height:78%;pointer-events:none;opacity:.9;
+  background-image:radial-gradient(circle,color-mix(in srgb,var(--sun-2) 55%,transparent) 1.6px,transparent 2.4px),linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:44px 44px;background-position:-22px -22px,0 0,0 0;
+  -webkit-mask-image:radial-gradient(ellipse 70% 70% at 70% 70%,#000 0,transparent 75%);mask-image:radial-gradient(ellipse 70% 70% at 70% 70%,#000 0,transparent 75%);
+  transform:perspective(900px) rotateX(38deg) rotateZ(-6deg);transform-origin:70% 100%}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center}
+.hero-text{min-width:0}
+.hero .eyebrow{color:var(--sun-2)}
+.hero h1{font-size:clamp(44px,6.3vw,86px);font-weight:900;letter-spacing:-.045em;line-height:.97;margin:18px 0 26px}
+.intro{font-size:clamp(16px,1.5vw,18px);color:var(--muted);max-width:50ch;margin:0 0 36px;line-height:1.6}
+.intro b{color:var(--fg);font-weight:600}
+.hstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:0 0 38px;max-width:640px}
+.hstats .n{font-family:var(--f-display);font-weight:800;font-size:30px;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.hstats .l{font-family:var(--f-mono);font-size:11.5px;line-height:1.55;color:var(--muted);margin-top:8px}
+.hbtns{display:flex;flex-wrap:wrap;gap:12px}
+.hb{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 20px;border-radius:6px;font:500 13px var(--f-mono);text-decoration:none;border:1px solid var(--fg);transition:transform .15s}
+.hb:hover{transform:translateY(-1px)}
+.hb.dark{background:var(--fg);color:var(--ink)}
+.hb.line{background:var(--ink);color:var(--fg)}
+.hero-media{position:relative;min-width:0;display:flex;justify-content:flex-end;padding-bottom:120px}
+.hcar{position:absolute;left:-14%;bottom:0;width:86%;z-index:2;perspective:1100px}
+.hcar img{display:block;width:100%;height:auto;transform-origin:55% 70%;will-change:transform;filter:drop-shadow(0 22px 26px rgba(10,14,30,.25))}
+.pwrap{width:min(290px,62vw);aspect-ratio:720/991;max-width:100%;margin-right:4%}
+.portrait{width:100%;height:100%;background:var(--ink);padding:7px;border-radius:14px;box-shadow:0 30px 60px -28px rgba(40,30,10,.4),0 0 0 1px var(--line);transform:rotate(2deg);will-change:transform;transform-origin:50% 50%}
+.portrait img{display:block;width:100%;height:100%;object-fit:cover;border-radius:9px}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:40px}
+  .hero-cells{width:100%;opacity:.6}
+  .hstats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero-media{justify-content:center;padding-bottom:110px}
+  .pwrap{width:min(220px,52vw);margin-right:0;margin-left:26%}
+  .hcar{left:-4%;width:88%}
+}
+
+.dock{position:fixed;z-index:40;top:calc(env(safe-area-inset-top,0px) + 62px);right:max(16px,env(safe-area-inset-right,0px));width:58px;aspect-ratio:720/991;border-radius:12px;overflow:hidden;box-shadow:0 10px 28px -8px rgba(40,30,10,.35),0 0 0 1px var(--line);opacity:0;pointer-events:none;transition:opacity .35s,transform .35s;transform:translateY(-6px)}
+.dock.on{opacity:1;transform:none}
+.dock img{display:block;width:100%;height:100%;object-fit:cover}
+@media (min-width:1240px){.dock{right:calc((100vw - 1180px)/2 + 20px)}}
+
+/* ---------- statement ---------- */
+.statement{padding-block:18vh 14vh}
+.statement p{font-family:var(--f-display);font-weight:700;font-size:clamp(30px,5vw,64px);line-height:1.08;letter-spacing:-.03em;margin:0;max-width:20ch}
+.statement .w{color:var(--fg);opacity:.2;transition:opacity .25s linear}
+.statement .w.on{opacity:1}
+.statement .w.hl.on{background:linear-gradient(100deg,var(--sun-1),var(--sun-2) 50%,var(--sun-3));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---------- numbers ---------- */
+.numbers{padding-block:4vh 16vh}
+.num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.num{padding:32px 20px 8px 0;border-right:1px solid var(--line);min-width:0}
+.num:last-child{border-right:0}
+.num + .num{padding-left:24px}
+.num .n{font-family:var(--f-display);font-weight:800;font-size:clamp(56px,8vw,104px);line-height:1;letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.num .l{color:var(--muted);font-size:15px;margin-top:10px;max-width:16ch}
+@media (max-width:760px){.num-grid{grid-template-columns:1fr 1fr}.num{border-bottom:1px solid var(--line)}.num:nth-child(2){border-right:0}.num:nth-child(3){padding-left:0}}
+
+/* ---------- section heads ---------- */
+.sec-head{padding-block:10vh 6vh}
+.sec-head h2{font-size:clamp(44px,8vw,112px);font-weight:900;letter-spacing:-.05em;line-height:.92;margin-top:14px}
+.sec-head p{color:var(--muted);font-size:clamp(17px,1.8vw,21px);max-width:46ch;margin:22px 0 0}
+.themes{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.themes span{font-size:14px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;color:var(--fg);background:var(--ink-2)}
+
+/* ---------- paper chapters ---------- */
+.chapter{position:relative;padding-block:8vh}
+.chapter .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:center}
+.chapter.flip .wrap{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.chapter.flip .ch-text{order:2}
+.ch-text{min-width:0}
+.ch-meta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ch-meta .j{color:var(--fg)}
+.badge{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:999px;border:1px solid color-mix(in srgb,var(--sun-2) 60%,transparent);color:var(--sun-1)}
+.ch-text h3{font-size:clamp(26px,3vw,38px);font-weight:700;letter-spacing:-.025em;line-height:1.1;margin:16px 0 14px}
+.ch-text .auth{font-size:15px;color:var(--muted);margin:0 0 18px}
+.ch-text .auth b{color:var(--fg);font-weight:600}
+.ch-text .sum{margin:0 0 22px;color:color-mix(in srgb,var(--fg) 82%,var(--muted));max-width:52ch}
+.kpis{display:flex;flex-wrap:wrap;gap:28px;margin:0 0 24px}
+.kpi .v{font-family:var(--f-display);font-weight:800;font-size:40px;letter-spacing:-.04em;line-height:1}
+.kpi .k{font-size:13px;color:var(--muted);margin-top:6px;max-width:18ch}
+.doi{font-family:var(--f-mono);font-size:13px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--dim);padding-bottom:2px;word-break:break-all;transition:color .2s,border-color .2s}
+.doi:hover{color:var(--fg);border-color:var(--sun-2)}
+.fig{position:relative;min-width:0;margin:0}
+.fig-mat{background:var(--paper);border-radius:28px;padding:clamp(14px,2.2vw,28px);box-shadow:0 40px 100px -50px color-mix(in srgb,var(--sun-2) 55%,transparent),0 0 0 1px var(--line);transform-origin:50% 60%;will-change:transform}
+.fig-mat img{display:block;width:100%;height:auto;max-height:72vh;object-fit:contain}
+.fig figcaption{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.04em;color:var(--dim);margin-top:14px}
+@media (max-width:860px){
+  .chapter .wrap,.chapter.flip .wrap{grid-template-columns:minmax(0,1fr);gap:30px}
+  .chapter.flip .ch-text{order:0}
+}
+
+/* domestic papers grid */
+.dom{padding-block:10vh 6vh}
+.dom h3.dh{font-size:clamp(24px,2.6vw,32px);letter-spacing:-.02em;font-weight:700;margin-bottom:28px}
+.dom-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.dcard{background:var(--ink-2);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.dcard .im{background:var(--paper);border-bottom:1px solid var(--line);height:220px;display:flex;align-items:center;justify-content:center;padding:16px}
+.dcard .im img{max-height:100%;width:auto;max-width:100%;object-fit:contain}
+.dcard .bd{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.dcard h4{font-family:var(--f-display);font-size:19px;line-height:1.2;letter-spacing:-.01em;margin:0;font-weight:700}
+.dcard .auth{font-size:14px;color:var(--muted);margin:0}
+.dcard .auth b{color:var(--fg);font-weight:600}
+.dcard .src{font-size:13px;color:var(--muted);margin:0}
+.dcard .doi{margin-top:auto;font-size:12px;align-self:flex-start}
+@media (max-width:900px){.dom-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- awards reel (pinned horizontal) ---------- */
+.awards{position:relative}
+.reel-pin{position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding-top:64px}
+.reel-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:34px}
+.reel-head h2{font-size:clamp(44px,7vw,96px);font-weight:900;letter-spacing:-.05em;line-height:.92}
+.reel-head .count{font-family:var(--f-mono);font-size:13px;color:var(--muted);white-space:nowrap}
+.track{display:flex;gap:22px;padding-left:var(--gutter-l);padding-right:var(--gutter-r);will-change:transform}
+.acard{flex:0 0 auto;width:min(380px,78vw);border-radius:26px;overflow:hidden;background:var(--ink-2);border:1px solid var(--line);display:flex;flex-direction:column}
+.acard .ph{position:relative;aspect-ratio:4/3;max-width:100%;overflow:hidden;background:radial-gradient(120% 90% at 20% 0%,color-mix(in srgb,var(--sun-2) 38%,var(--ink-2)) 0,var(--ink-2) 70%)}
+.acard .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.acard .ph.cert{background:var(--ink-2)}
+.acard .ph.cert img{object-fit:contain;padding:14px;filter:drop-shadow(0 8px 16px rgba(0,0,0,.12))}
+.acard .ph .yr{position:absolute;left:22px;bottom:6px;font-family:var(--f-display);font-weight:900;font-size:110px;line-height:1;letter-spacing:-.06em;color:color-mix(in srgb,var(--fg) 12%,transparent)}
+.acard .ph .medal{position:absolute;right:22px;top:22px;width:54px;height:54px;border-radius:50%;background:conic-gradient(from 210deg,var(--sun-1),var(--sun-2),var(--sun-3),var(--sun-1));box-shadow:inset 0 0 0 6px rgba(0,0,0,.18)}
+.acard.top .ph{background:radial-gradient(120% 90% at 20% 0%,color-mix(in srgb,var(--sun-1) 46%,var(--ink-2)) 0,color-mix(in srgb,var(--sun-3) 22%,var(--ink-2)) 55%,var(--ink-2) 90%)}
+.acard .bd{padding:22px 24px 26px;display:flex;flex-direction:column;gap:8px}
+.acard .when{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.acard h4{font-family:var(--f-display);font-weight:700;font-size:22px;line-height:1.15;letter-spacing:-.02em;margin:0}
+.acard .org{font-size:14px;color:var(--muted);margin:0}
+.acard .work{font-size:14px;margin:6px 0 0;padding-top:12px;border-top:1px solid var(--line);color:color-mix(in srgb,var(--fg) 82%,var(--muted))}
+.reel-bar{height:2px;background:var(--line);margin-top:36px;border-radius:2px;overflow:hidden}
+.reel-bar i{display:block;height:100%;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--sun-1),var(--sun-3))}
+/* stacked fallback for narrow screens and reduced motion */
+.awards.stacked{height:auto!important}
+.awards.stacked .reel-pin{position:static;height:auto;padding-block:10vh 4vh}
+.awards.stacked .track{flex-direction:column;transform:none!important;padding:0}
+.awards.stacked .track-wrap{padding-left:var(--gutter-l);padding-right:var(--gutter-r);max-width:1180px;margin:0 auto;width:100%}
+.awards.stacked .acard{width:100%;flex-direction:row}
+.awards.stacked .acard .ph{width:34%;aspect-ratio:auto;min-height:170px;flex:0 0 auto}
+.awards.stacked .acard .ph .yr{font-size:64px}
+.awards.stacked .acard .ph .medal{width:36px;height:36px;right:14px;top:14px}
+.awards.stacked .reel-bar{display:none}
+@media (max-width:560px){.awards.stacked .acard{flex-direction:column}.awards.stacked .acard .ph{width:100%;aspect-ratio:16/9;min-height:0}}
+
+/* ---------- talks ---------- */
+.talks{padding-block:14vh 8vh}
+.talks h2{font-size:clamp(36px,5vw,64px);font-weight:900;letter-spacing:-.045em;line-height:.95;margin-bottom:36px}
+.tl{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.tl li{display:grid;grid-template-columns:130px minmax(0,1fr) auto;gap:24px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.tl .d{font-family:var(--f-mono);font-size:13px;color:var(--fg);font-variant-numeric:tabular-nums}
+.tl .d em{font-style:normal;color:var(--muted);margin-left:8px}
+.tl .t.plain{font-weight:500;font-size:17px}
+.tl .ty.intl{color:var(--sun-2);border-color:color-mix(in srgb,var(--sun-2) 45%,transparent)}
+.tl .ty.aw{color:var(--fg);background:var(--ink-2)}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line);text-decoration:none;display:inline-block}
+.tl .t{font-weight:600;font-size:18px;line-height:1.3;min-width:0}
+.tl .v{display:block;font-weight:400;font-size:14px;color:var(--muted);margin-top:4px}
+.tl .ty{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:4px 9px;border-radius:999px;white-space:nowrap}
+@media (max-width:640px){.tl li{grid-template-columns:minmax(0,1fr);gap:6px}.tl .ty{justify-self:start}}
+
+/* ---------- contact ---------- */
+.contact{padding-block:10vh 10vh;text-align:center;border-top:1px solid var(--line)}
+.contact h2{font-size:clamp(48px,10vw,140px);font-weight:900;letter-spacing:-.055em;line-height:.9}
+.contact p{color:var(--muted);font-size:clamp(17px,2vw,21px);max-width:44ch;margin:24px auto 36px}
+.mail{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center}
+.mail code{font-family:var(--f-mono);font-size:clamp(15px,2vw,19px);padding:14px 20px;border-radius:999px;background:var(--ink-2);border:1px solid var(--line);user-select:all;word-break:break-all}
+.btn{font:600 15px var(--f-body);color:var(--ink);background:var(--fg);border:0;border-radius:999px;padding:14px 22px;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:scale(1.03)}
+.facts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-top:48px;font-size:14px;color:var(--muted)}
+.facts b{color:var(--fg);font-weight:600}
+footer{padding-block:28px 40px;border-top:1px solid var(--line);font-size:12px;color:var(--dim);font-family:var(--f-mono)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero{height:auto}.hero-pin{position:static}
+  .statement .w{opacity:1}
+}
+</style>
+</head>
+<body>
+
+
+<header class="nav">
+  <div class="wrap">
+    <b>Jimin Hong</b>
+    <div class="nav-r">
+      <nav aria-label="Sections">
+        <a href="#research">Research</a>
+        <a href="#awards">Awards</a>
+        <a href="#talks">Talks</a>
+      </nav>
+      <div class="nav-c">
+        <button class="chip" id="navMail" type="button" title="Copy email address"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="lbl" id="navMailTxt">jimin0411@sju.ac.kr</span></button>
+        <a class="chip cvdl" href="cv.pdf" download="Jimin_Hong_CV.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg><span class="lbl">CV</span></a>
+        <a class="chip" href="https://scholar.google.com/citations?user=12lDwlkAAAAJ" target="_blank" rel="noopener"><span>GS</span><span class="lbl">Scholar</span></a>
+        <a class="chip rg" href="https://www.researchgate.net/profile/Jimin-Hong-8" target="_blank" rel="noopener"><span>RG</span><span class="lbl">ResearchGate</span></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-sun" aria-hidden="true"></div>
+  <div class="hero-cells" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <div class="eyebrow">Vehicle-integrated PV · Sejong University, South Korea</div>
+      <h1>Every parked car is a <span class="sun">solar</span> power plant.</h1>
+      <p class="intro">I'm <b>Jimin Hong</b>, a Ph.D. student at Sejong University. I predict how vehicle-integrated solar performs in real driving and parking, from 360° sky imaging and solar-access databases to AI-corrected five-surface forecasts.</p>
+      <div class="hstats">
+        <div><div class="n">7</div><div class="l">journal papers<br>5 first-author</div></div>
+        <div><div class="n">4</div><div class="l">international<br>(Applied Energy…)</div></div>
+        <div><div class="n">11</div><div class="l">awards<br>incl. Silver Prize</div></div>
+        <div><div class="n">17</div><div class="l">conference talks<br>6 international</div></div>
+      </div>
+      <div class="hbtns">
+        <a class="hb dark" href="#research">Explore research</a>
+        <a class="hb line cvdl" href="cv.pdf" download="Jimin_Hong_CV.pdf"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>Download CV (PDF)</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="pwrap" id="pwrap"><div class="portrait" id="heroPhoto"><img src="img/portrait.jpg" alt="Portrait of Jimin Hong"></div></div>
+      <div class="hcar"><img id="hcarImg" src="img/solar-ev.webp" alt="Solar electric vehicle with photovoltaic panels on the roof and hood"></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="statement wrap" aria-label="Research statement">
+  <p id="statement" data-hl="predicts,more">My research predicts how vehicle-integrated solar performs in real driving and parking, and finds ways to put more of that power to use.</p>
+</section>
+
+
+
+<section id="research">
+  <div class="sec-head wrap">
+    <div class="eyebrow">Research</div>
+    <h2>Seven papers.<br><span class="sun">One sun.</span></h2>
+    <p>I build tools that measure, predict and optimize how renewable energy is captured and used, from a single parked car to an entire data center.</p>
+    <div class="themes">
+      <span>Solar electric vehicles &amp; VIPV</span>
+      <span>Solar access &amp; shading analysis</span>
+      <span>Off-grid renewable microgrids</span>
+      <span>CCUS &amp; energy system optimization</span>
+      <span>Physical AI for mineral processing</span>
+    </div>
+  </div>
+
+  <article class="chapter">
+    <div class="wrap">
+      <div class="ch-text">
+        <div class="ch-meta"><span class="j">Applied Energy</span><span>2025</span><span class="badge">First author</span></div>
+        <h3>Advanced parking assistance system for solar electric vehicles using 360° VR imaging and real-time solar radiation forecasting</h3>
+        <p class="auth"><b>Jimin Hong</b>, Yosoon Choi</p>
+        <p class="sum">A roof-mounted 360° VR camera captures the sky above a parking space, and a smartphone app turns that image into solar access. Combined with live solar radiation forecasts, it predicts how much the car will charge before the driver walks away. Validated against a Solmetric SunEye 210 and on-vehicle panel measurements.</p>
+        <a class="doi" href="https://doi.org/10.1016/j.apenergy.2025.126365" target="_blank" rel="noopener">doi.org/10.1016/j.apenergy.2025.126365</a>
+      </div>
+      <figure class="fig"><div class="fig-mat zoom"><img src="img/fig-apenergy.jpg" alt="Workflow: capture a sky image with a 360 degree camera on the car, compute solar access, then predict hourly power generation" loading="lazy"></div><figcaption>Fig. 2 · Estimating real-time power generation while parked with the SOL-PARKING app</figcaption></figure>
+    </div>
+  </article>
+
+  <article class="chapter flip">
+    <div class="wrap">
+      <div class="ch-text">
+        <div class="ch-meta"><span class="j">Solar Energy Materials &amp; Solar Cells</span><span>2025</span><span class="badge">First author</span></div>
+        <h3>Design and implementation of a solar access database for optimizing parking of solar electric vehicles</h3>
+        <p class="auth"><b>Jimin Hong</b>, Yosoon Choi</p>
+        <div class="kpis">
+          <div class="kpi"><div class="v sun">1,388</div><div class="k">parking bays mapped</div></div>
+          <div class="kpi"><div class="v">4</div><div class="k">seasons, hour by hour</div></div>
+        </div>
+        <p class="sum">A campus-wide Solar Access database visualized in QGIS, showing which bays get the most sun for each season and time of day. The mobile app now recommends a bay based on how long the driver plans to stay.</p>
+        <a class="doi" href="https://doi.org/10.1016/j.solmat.2025.113841" target="_blank" rel="noopener">doi.org/10.1016/j.solmat.2025.113841</a>
+      </div>
+      <figure class="fig"><div class="fig-mat zoom"><img src="img/fig-solmat.jpg" alt="QGIS classification of solar access into five levels and a color-coded aerial map of parking bays" loading="lazy"></div><figcaption>Fig. 6 · Solar access classified into five levels and mapped onto each parking bay</figcaption></figure>
+    </div>
+  </article>
+
+  <article class="chapter">
+    <div class="wrap">
+      <div class="ch-text">
+        <div class="ch-meta"><span class="j">Journal of Engineering Research</span><span>2026</span><span class="badge">First author</span></div>
+        <h3>Comparative techno-economic assessment of energy storage technologies in an off-grid renewable microgrid for AI data centers</h3>
+        <p class="auth"><b>Jimin Hong</b>, Yosoon Choi</p>
+        <div class="kpis">
+          <div class="kpi"><div class="v sun">$0.1427</div><div class="k">per kWh, lowest LCOE (VRFB)</div></div>
+          <div class="kpi"><div class="v">$29.1M</div><div class="k">net present cost</div></div>
+        </div>
+        <p class="sum">A HOMER Pro study of a wind- and PV-led microgrid with hydrogen backup, comparing Li-ion, vanadium redox flow and flywheel storage. Flow batteries win at 0.5–1 MW loads; Li-ion takes over at 1.5 MW and above.</p>
+        <a class="doi" href="https://doi.org/10.1016/j.jer.2026.10.038" target="_blank" rel="noopener">doi.org/10.1016/j.jer.2026.10.038</a>
+      </div>
+      <figure class="fig"><div class="fig-mat zoom"><img src="img/fig-jer.jpg" alt="Schematic of an off-grid microgrid: PV, wind turbine, batteries, flywheel, fuel cell and hydrogen storage feeding a data center via DC and AC buses" loading="lazy"></div><figcaption>Fig. 1 · Off-grid renewable microgrid for an AI data center</figcaption></figure>
+    </div>
+  </article>
+
+  <article class="chapter flip">
+    <div class="wrap">
+      <div class="ch-text">
+        <div class="ch-meta"><span class="j">Korean Journal of Chemical Engineering</span><span>2026</span><span class="badge">Co-first author</span></div>
+        <h3>Optimizing CCUS–methanol integrated systems using a two-stage framework: enhancing profitability and sustainability of coal in the carbon-neutral era</h3>
+        <p class="auth"><b>Jimin Hong</b>, Farshad Khavari, Yosoon Choi</p>
+        <div class="kpis">
+          <div class="kpi"><div class="v sun">+25.1%</div><div class="k">annual profit vs. conventional</div></div>
+          <div class="kpi"><div class="v">452.6 t</div><div class="k">methanol per year from stored CO₂</div></div>
+        </div>
+        <p class="sum">Salt-cavern CO₂ storage paired with solar power in South Australia. A two-stage optimization balances daily profit with seasonal injection and withdrawal cycles.</p>
+        <a class="doi" href="https://doi.org/10.1007/s11814-026-00742-y" target="_blank" rel="noopener">doi.org/10.1007/s11814-026-00742-y</a>
+      </div>
+      <figure class="fig"><div class="fig-mat zoom"><img src="img/fig-kjche.jpg" alt="Conceptual diagram of electricity, CO2 and methanol sections, and a 3D schematic model of the plant" loading="lazy"></div><figcaption>Fig. 1 · Integrated electricity, CO₂ and methanol system</figcaption></figure>
+    </div>
+  </article>
+
+  <div class="dom wrap">
+    <h3 class="dh">Also published in Korean journals</h3>
+    <div class="dom-grid">
+      <article class="dcard">
+        <div class="im"><img src="img/fig-kses.jpg" alt="SOL-PARKING app screens showing sky images and solar access values" loading="lazy"></div>
+        <div class="bd">
+          <h4>Development of parking space analysis system for solar electric vehicle using 360 VR camera</h4>
+          <p class="auth"><b>Jimin Hong</b>, Jieun Baek, Yosoon Choi</p>
+          <p class="src">Journal of the Korean Solar Energy Society 43(3), 11–30 · 2023</p>
+          <a class="doi" href="https://doi.org/10.7836/kses.2023.43.3.011" target="_blank" rel="noopener">doi.org/10.7836/kses.2023.43.3.011</a>
+        </div>
+      </article>
+      <article class="dcard">
+        <div class="im"><img src="img/fig-ksmer-logger.jpg" alt="GPS-tracked driving and parking routes across Busan" loading="lazy"></div>
+        <div class="bd">
+          <h4>Development of Arduino-based power-generation data logger for evaluating potential of vehicle-integrated PV systems</h4>
+          <p class="auth">Sanha Choi, <b>Jimin Hong</b>, Yosoon Choi</p>
+          <p class="src">Journal of the Korean Society of Mineral and Energy Resources Engineers 62(4), 414–424 · 2025</p>
+          <a class="doi" href="https://doi.org/10.32390/ksmer.2025.62.4.414" target="_blank" rel="noopener">doi.org/10.32390/ksmer.2025.62.4.414</a>
+        </div>
+      </article>
+      <article class="dcard">
+        <div class="im"><img src="img/fig-review.jpg" alt="Cumulative number of Korean solar EV publications and their share by topic" loading="lazy"></div>
+        <div class="bd">
+          <h4>Research trends on solar electric vehicles in Korea</h4>
+          <p class="auth">Yosoon Choi, Jangwon Suh, Sung-Min Kim, Jiyoon Ku, <b>Jimin Hong</b>, Hyeong-Dong Park</p>
+          <p class="src">Journal of the Korean Society of Mineral and Energy Resources Engineers 62(1), 41–60 · 2025</p>
+          <a class="doi" href="https://doi.org/10.32390/ksmer.2025.62.1.041" target="_blank" rel="noopener">doi.org/10.32390/ksmer.2025.62.1.041</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="awards" id="awards">
+  <div class="reel-pin">
+    <div class="wrap reel-head">
+      <div>
+        <div class="eyebrow">Awards &amp; honors</div>
+        <h2 style="margin-top:14px">Recognized,<br><span class="sun">eleven times.</span></h2>
+      </div>
+      <div class="count" id="reelCount">2026 → 2022</div>
+    </div>
+    <div class="track-wrap"><div class="track" id="track"></div></div>
+    <div class="wrap"><div class="reel-bar"><i id="reelBar"></i></div></div>
+  </div>
+</section>
+
+<section class="talks wrap" id="talks">
+  <div class="eyebrow" style="margin-bottom:14px">Conference presentations</div>
+  <h2>17 talks.<br><span class="sun">6 international.</span></h2>
+  <ol class="tl">
+    <li><span class="d">2026<em>Fall</em></span><span class="t">AI agent-based prediction and automatic correction of five-surface power generation for parked solar electric vehicles<span class="v">2026 Fall Joint Conference of the Korean Resources Societies</span></span><span class="ty aw">Award</span></li>
+    <li><span class="d">2026</span><span class="t plain">PV in Motion 2026</span><span class="ty intl">International</span></li>
+    <li><span class="d">2026<em>Spring</em></span><span class="t">Techno-economic comparison of energy storage systems in an off-grid RE100 microgrid for AI data centers<span class="v">126th Spring Conference, Korean Society of Mineral and Energy Resources Engineers</span></span><span class="ty aw">Award</span></li>
+    <li><span class="d">2026<em>Spring</em></span><span class="t plain">Spring Conference, Korean Society for New and Renewable Energy</span><span></span></li>
+    <li><span class="d">2026</span><span class="t plain">SME Annual Conference &amp; Expo 2026</span><span class="ty intl">International</span></li>
+    <li><span class="d">2025<em>Fall</em></span><span class="t plain">AFORE 2025, Asia-Pacific Forum on Renewable Energy</span><span class="ty intl">International</span></li>
+    <li><span class="d">2025<em>Fall</em></span><span class="t plain">Fall Conference, Korean Society of Mineral and Energy Resources Engineers</span><span></span></li>
+    <li><span class="d">2025</span><span class="t plain">PV in Motion 2025</span><span class="ty intl">International</span></li>
+    <li><span class="d">2025<em>Spring</em></span><span class="t plain">Spring Conference, Korean Solar Energy Society</span><span></span></li>
+    <li><span class="d">2025<em>Spring</em></span><span class="t plain">Spring Conference, Korean Society for New and Renewable Energy</span><span></span></li>
+    <li><span class="d">2024</span><span class="t plain">APSRC 2024, Asia-Pacific Solar Research Conference</span><span class="ty intl">International</span></li>
+    <li><span class="d">2024<em>Fall</em></span><span class="t">Building and applying a Solar Access database for solar EV parking lots<span class="v">2024 Fall Joint Conference of the Korean Resources Societies</span></span><span class="ty aw">Award</span></li>
+    <li><span class="d">2024</span><span class="t plain">PV in Motion 2024</span><span class="ty intl">International</span></li>
+    <li><span class="d">2024<em>Spring</em></span><span class="t plain">Spring Conference, Korean Association of Geographic Information Studies</span><span></span></li>
+    <li><span class="d">2024<em>Spring</em></span><span class="t plain">Spring Conference, Korean Solar Energy Society</span><span></span></li>
+    <li><span class="d">2023<em>Fall</em></span><span class="t plain">Fall Conference, Korean Society of Mineral and Energy Resources Engineers</span><span></span></li>
+    <li><span class="d">2023<em>Spring</em></span><span class="t">Parking space analysis system for solar electric vehicles using a 360 VR camera<span class="v">2023 Spring Conference, Korean Solar Energy Society</span></span><span class="ty aw">Award</span></li>
+  </ol>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="margin-bottom:22px">Contact</div>
+    <div class="mail">
+      <code id="mailAddr">jimin0411@sju.ac.kr</code>
+      <button class="btn" id="copyBtn" type="button">Copy email</button>
+      <a class="btn ghost" href="https://www.researchgate.net/profile/Jimin-Hong-8" target="_blank" rel="noopener">ResearchGate ↗</a>
+      <a class="btn ghost" href="https://scholar.google.com/citations?user=12lDwlkAAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a>
+    </div>
+    <div class="facts">
+      <span><b>Sejong University</b> · Integrated M.S.–Ph.D., Energy Resources &amp; Geosystems Eng. (2023–)</span>
+      <span><b>Pukyong National University</b> · B.S., Energy Resources Eng. (2020–2023)</span>
+      <span>Advisor · <b>Prof. Yosoon Choi</b></span>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>Jimin Hong · Seoul, Korea</span><span>Figures reproduced from the author’s own publications</span></div></footer>
+
+<script>
+(function(){
+  /* ---------- awards data (newest first). Add a photo path to "photo" to show it. ---------- */
+  const AWARDS=[
+    {y:"2026",m:"Nov",t:"Best Paper Presentation Award",o:"2026 Fall Joint Conference of the Korean Resources Societies",w:"AI agent-based prediction and automatic correction of five-surface power generation for parked solar EVs",photo:"img/a11.jpg",pos:"50% 40%"},
+    {y:"2026",m:"Sep",t:"Silver Prize · KOMIA President’s Award",o:"7th Mine-Tech Festa, Innovative Technology Competition",w:"Physical AI-based autonomous flotation process: real-time froth recognition and robotic water-spray control",photo:"img/a10.jpg",top:true},
+    {y:"2026",m:"Apr",t:"Best Paper Presentation Award",o:"126th Spring Conference, Korean Society of Mineral and Energy Resources Engineers",w:"Energy storage options for an off-grid RE100 microgrid for AI data centers",photo:"img/a09.jpg"},
+    {y:"2025",m:"Sep",t:"Encouragement Award",o:"6th Mine-Tech Festa, Korea Mine Rehabilitation and Mineral Resources Corp.",w:"Coal in the carbon-neutral era: optimizing methanol production with CCUS and renewables",photo:"img/a08.jpg",cert:true},
+    {y:"2024",m:"Nov",t:"Best Paper Presentation Award",o:"2024 Fall Joint Conference of the Korean Resources Societies",w:"Solar Access database for solar EV parking",photo:"img/a07.jpg"},
+    {y:"2024",m:"Feb",t:"Presidential Commendation",o:"Korean Association of Geographic Information Studies",w:"Selected as an emerging talent in geospatial information",photo:"img/a06.jpg",cert:true},
+    {y:"2023",m:"Nov",t:"Special Prize, Renewable Energy",o:"1st Energy Optimization Design Contest, Korean Solar Energy Society",w:"Rooftop PV and energy storage design for a parking tower",photo:"img/a04.jpg",pos:"50% 30%"},
+    {y:"2023",m:"Aug",t:"University President’s Award",o:"Pukyong National University",w:"For academic activity and service to the university",photo:"img/a05.jpg"},
+    {y:"2023",m:"Apr",t:"Outstanding Paper Award",o:"Korea Energy Agency · 2023 Spring Conference, Korean Solar Energy Society",w:"360 VR camera parking space analysis system",photo:"img/a02.jpg",top:true},
+    {y:"2023",m:"Apr",t:"Outstanding Oral Presentation Award",o:"Korean Solar Energy Society",w:"360 VR camera parking space analysis system",photo:"img/a03.jpg",cert:true},
+    {y:"2022",m:"Oct",t:"Excellence Award",o:"2022 Energy Data & AI Idea Contest, Korean Solar Energy Society",w:"Siting solar-EV parking with TMY data, aerial imagery and AI (team SolarICT)",photo:"img/a01.jpg",pos:"50% 35%"}
+  ];
+  const track=document.getElementById('track');
+  track.innerHTML=AWARDS.map(a=>`
+    <article class="acard${a.top?' top':''}">
+      <div class="ph${a.cert?' cert':''}">${a.photo?`<img src="${a.photo}" alt="${a.cert?'Certificate':'Award photo'}: ${a.t}" loading="lazy"${a.pos?` style="object-position:${a.pos}"`:''}>`:`<span class="medal" aria-hidden="true"></span><span class="yr" aria-hidden="true">${a.y}</span>`}</div>
+      <div class="bd">
+        <div class="when">${a.m} ${a.y}</div>
+        <h4>${a.t}</h4>
+        <p class="org">${a.o}</p>
+        ${a.w?`<p class="work">${a.w}</p>`:''}
+      </div>
+    </article>`).join('');
+
+  /* ---------- statement words ---------- */
+  const st=document.getElementById('statement');
+  const hl=st.dataset.hl.split(',');
+  st.innerHTML=st.textContent.trim().split(/\s+/).map(w=>{
+    const clean=w.replace(/[.,]/g,'');
+    return `<span class="w${hl.includes(clean)?' hl':''}">${w}</span>`;
+  }).join(' ');
+  const words=[...st.querySelectorAll('.w')];
+
+  /* ---------- copy email ---------- */
+  const btn=document.getElementById('copyBtn'), addr=document.getElementById('mailAddr');
+  btn.addEventListener('click',()=>{
+    const done=()=>{btn.textContent='Copied';setTimeout(()=>btn.textContent='Copy email',1600)};
+    const fallback=()=>{const r=document.createRange();r.selectNodeContents(addr);const s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected, press Ctrl+C';setTimeout(()=>btn.textContent='Copy email',2200)};
+    try{navigator.clipboard.writeText(addr.textContent).then(done,fallback)}catch(e){fallback()}
+  });
+
+  const navMail=document.getElementById('navMail'), navTxt=document.getElementById('navMailTxt');
+  navMail.addEventListener('click',()=>{
+    const reset=()=>setTimeout(()=>{navTxt.textContent='jimin0411@sju.ac.kr';navMail.classList.remove('ok')},1800);
+    const ok=()=>{navTxt.textContent='Copied';navMail.title='Email copied';reset()};
+    try{navigator.clipboard.writeText('jimin0411@sju.ac.kr').then(ok,()=>{navTxt.textContent='jimin0411@sju.ac.kr';})}catch(e){}
+  });
+
+  let dlNS=null;
+  try{ if(window.claude&&claude.use) claude.use('downloads').then(n=>{dlNS=n}).catch(()=>{}); }catch(e){}
+  document.querySelectorAll('.cvdl').forEach(a=>a.addEventListener('click',async ev=>{
+    if(!dlNS) return; // standalone site: the normal download link works
+    ev.preventDefault();
+    try{ const blob=await (await fetch('cv.pdf')).blob(); await dlNS.save({filename:'Jimin_Hong_CV.pdf',data:blob}); }
+    catch(e){ if(e&&e.code&&e.code!=='declined'&&e.code!=='rate_limited') window.open('cv.pdf','_blank'); }
+  }));
+
+  /* ---------- scroll engine ---------- */
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const awards=document.getElementById('awards');
+  const bar=document.getElementById('reelBar');
+  const heroPhoto=document.getElementById('heroPhoto'), pwrap=document.getElementById('pwrap');
+  const hcar=document.getElementById('hcarImg');
+  const sm=(a,b,v)=>{const t=Math.min(1,Math.max(0,(v-a)/(b-a)));return t*t*(3-2*t)};
+  const zooms=[...document.querySelectorAll('.zoom')];
+  const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+  let reelDist=0, stacked=false;
+
+  function layoutReel(){
+    stacked = reduce || innerWidth<760;
+    awards.classList.toggle('stacked',stacked);
+    if(stacked){awards.style.height='';return}
+    reelDist=Math.max(0,track.scrollWidth-innerWidth);
+    awards.style.height=(innerHeight+reelDist)+'px';
+  }
+
+  function frame(){
+    const vh=innerHeight;
+    if(!reduce){
+      // hero car turns a little as you scroll
+      const cr=hcar.getBoundingClientRect();
+      const cp=clamp((vh-cr.top)/(vh+cr.height));
+      const ct=sm(0.25,0.9,cp);
+      hcar.style.transform=`rotateY(${-10+38*ct}deg) rotateX(${2-4*ct}deg) translateX(${ct*6}%) scale(${1+0.06*ct})`;
+      // figure chapters zoom from 0.84 to 1 as they enter
+      zooms.forEach(z=>{
+        const r=z.getBoundingClientRect();
+        const p=clamp((vh-r.top)/(vh*0.75));
+        const e=1-Math.pow(1-p,3);
+        z.style.transform=`scale(${0.84+e*0.16}) translateY(${(1-e)*40}px)`;
+      });
+    }
+    // statement words light up
+    const sr=st.getBoundingClientRect();
+    const sp=reduce?1:clamp((vh*0.82-sr.top)/(sr.height+vh*0.3));
+    const lit=Math.round(sp*words.length);
+    words.forEach((w,i)=>w.classList.toggle('on',i<lit));
+    // awards reel
+    if(!stacked){
+      const ar=awards.getBoundingClientRect();
+      const p=clamp(-ar.top/(reelDist||1));
+      track.style.transform=`translateX(${-p*reelDist}px)`;
+      bar.style.transform=`scaleX(${p})`;
+    }
+  }
+  let ticking=false;
+  const onScroll=()=>{if(!ticking){ticking=true;requestAnimationFrame(()=>{frame();ticking=false})}};
+  addEventListener('scroll',onScroll,{passive:true});
+  addEventListener('resize',()=>{layoutReel();frame()});
+  addEventListener('load',()=>{layoutReel();frame()});
+  layoutReel();frame();
+})();
+</script>
+
+</body>
+</html>
